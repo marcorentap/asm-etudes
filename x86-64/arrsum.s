@@ -20,10 +20,6 @@ func1:
 	.cfi_endproc
 .LFE0:
 	.size	func1, .-func1
-	.section	.rodata
-.LC0:
-	.string	"Result: %d"
-	.text
 	.globl	main
 	.type	main, @function
 main:
@@ -45,11 +41,7 @@ main:
 	leaq	-20(%rbp), %rax
 	movq	%rax, %rdi
 	call	func1
-	movl	%eax, %esi
-	leaq	.LC0(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf@PLT
+	movl	%eax, -24(%rbp)
 	movl	$0, %eax
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx

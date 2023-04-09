@@ -19,11 +19,6 @@ func1:
 	addi	sp,sp,32
 	jr	ra
 	.size	func1, .-func1
-	.section	.rodata
-	.align	2
-.LC0:
-	.string	"Result: %d"
-	.text
 	.align	2
 	.globl	main
 	.type	main, @function
@@ -33,19 +28,15 @@ main:
 	sw	s0,24(sp)
 	addi	s0,sp,32
 	li	a5,2
-	sw	a5,-28(s0)
+	sw	a5,-32(s0)
 	li	a5,3
-	sw	a5,-24(s0)
+	sw	a5,-28(s0)
 	li	a5,4
-	sw	a5,-20(s0)
-	addi	a5,s0,-28
+	sw	a5,-24(s0)
+	addi	a5,s0,-32
 	mv	a0,a5
 	call	func1
-	mv	a5,a0
-	mv	a1,a5
-	lui	a5,%hi(.LC0)
-	addi	a0,a5,%lo(.LC0)
-	call	printf
+	sw	a0,-20(s0)
 	li	a5,0
 	mv	a0,a5
 	lw	ra,28(sp)
