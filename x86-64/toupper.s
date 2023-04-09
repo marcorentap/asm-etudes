@@ -1,4 +1,4 @@
-	.file	"to_upper.c"
+	.file	"toupper.c"
 	.text
 	.globl	func2
 	.type	func2, @function

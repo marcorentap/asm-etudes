@@ -1,4 +1,4 @@
-	.file	"to_upper.c"
+	.file	"toupper.c"
 	.option nopic
 	.attribute arch, "rv32i2p0"
 	.attribute unaligned_access, 0
