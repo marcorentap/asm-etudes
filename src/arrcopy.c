@@ -9,6 +9,6 @@ int main() {
     int arr[] = {2, 3, 4};
     int arr2[3];
 
-    func1(arr, arr2);
+    func1(arr2, arr);
     return 0;
 }

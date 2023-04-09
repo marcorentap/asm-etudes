@@ -59,8 +59,8 @@ main:
 	movl	$2, -32(%rbp)
 	movl	$3, -28(%rbp)
 	movl	$4, -24(%rbp)
-	leaq	-20(%rbp), %rdx
-	leaq	-32(%rbp), %rax
+	leaq	-32(%rbp), %rdx
+	leaq	-20(%rbp), %rax
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	func1

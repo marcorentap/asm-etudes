@@ -54,8 +54,8 @@ main:
 	sw	a5,-24(s0)
 	li	a5,4
 	sw	a5,-20(s0)
-	addi	a4,s0,-40
-	addi	a5,s0,-28
+	addi	a4,s0,-28
+	addi	a5,s0,-40
 	mv	a1,a4
 	mv	a0,a5
 	call	func1
