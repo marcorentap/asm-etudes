@@ -13,7 +13,15 @@ func1:
 	.cfi_def_cfa_register 6
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rax
-	movl	8(%rax), %eax
+	movl	(%rax), %edx
+	movq	-8(%rbp), %rax
+	addq	$4, %rax
+	movl	(%rax), %eax
+	addl	%eax, %edx
+	movq	-8(%rbp), %rax
+	addq	$8, %rax
+	movl	(%rax), %eax
+	addl	%edx, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret

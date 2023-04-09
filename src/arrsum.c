@@ -1,5 +1,5 @@
 int func1(int *arr) {
-    return arr[0], arr[1], arr[2];
+    return arr[0] + arr[1] + arr[2];
 }
 
 int main() {
