@@ -13,16 +13,16 @@ func1:
 	.cfi_def_cfa_register 6
 	movl	%edi, -20(%rbp)
 	movl	$0, -4(%rbp)
-	movl	$0, -8(%rbp)
+	movl	$1, -8(%rbp)
 	jmp	.L2
 .L3:
-	movl	-20(%rbp), %eax
+	movl	-8(%rbp), %eax
 	addl	%eax, -4(%rbp)
 	addl	$1, -8(%rbp)
 .L2:
 	movl	-8(%rbp), %eax
 	cmpl	-20(%rbp), %eax
-	jl	.L3
+	jle	.L3
 	movl	-4(%rbp), %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
