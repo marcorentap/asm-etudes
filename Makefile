@@ -10,6 +10,10 @@ x86-64: $(SRCS:src/%.c=x86-64/%.s)
 x86-64/%.s: src/%.c
 	gcc -march=x86-64 -O0 -S -o $@ $<
 
+test: $(SRCS:src/%.c=test/%)
+test/%: src/%.c
+	gcc -O0 -o $@ $<
+
 .PHONY: clean
 clean: all
 	find . -name '*.s' -delete
