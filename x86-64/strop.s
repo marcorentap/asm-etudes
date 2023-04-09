@@ -17,7 +17,11 @@ func1:
 	movb	$0, (%rax)
 	movq	-8(%rbp), %rax
 	addq	$6, %rax
-	movb	$2, (%rax)
+	movzbl	(%rax), %eax
+	leal	2(%rax), %edx
+	movq	-8(%rbp), %rax
+	addq	$6, %rax
+	movb	%dl, (%rax)
 	nop
 	popq	%rbp
 	.cfi_def_cfa 7, 8

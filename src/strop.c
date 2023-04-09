@@ -2,7 +2,7 @@
 
 void func1(char *str) {
     *(str + 9) = '\0';
-    *(str + 6) = 2;
+    *(str + 6) += 2;
 }
 
 int main() {

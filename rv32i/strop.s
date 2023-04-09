@@ -17,7 +17,11 @@ func1:
 	sb	zero,0(a5)
 	lw	a5,-20(s0)
 	addi	a5,a5,6
-	li	a4,2
+	lbu	a4,0(a5)
+	lw	a5,-20(s0)
+	addi	a5,a5,6
+	addi	a4,a4,2
+	andi	a4,a4,0xff
 	sb	a4,0(a5)
 	nop
 	lw	s0,28(sp)
