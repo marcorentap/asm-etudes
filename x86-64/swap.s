@@ -13,7 +13,7 @@ func1:
 	.cfi_def_cfa_register 6
 	movq	%rdi, -24(%rbp)
 	movq	%rsi, -32(%rbp)
-	movq	-24(%rbp), %rax
+	movq	-32(%rbp), %rax
 	movl	(%rax), %eax
 	movl	%eax, -4(%rbp)
 	movq	-24(%rbp), %rax

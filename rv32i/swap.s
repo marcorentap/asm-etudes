@@ -13,7 +13,7 @@ func1:
 	addi	s0,sp,48
 	sw	a0,-36(s0)
 	sw	a1,-40(s0)
-	lw	a5,-36(s0)
+	lw	a5,-40(s0)
 	lw	a5,0(a5)
 	sw	a5,-20(s0)
 	lw	a5,-36(s0)

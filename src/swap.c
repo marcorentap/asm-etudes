@@ -1,5 +1,5 @@
 void func1(int *x, int *y) {
-    int temp = *x;
+    int temp = *y;
     *y = *x;
     *x = temp;
 }
