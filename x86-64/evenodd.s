@@ -92,7 +92,7 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	movl	$3, -12(%rbp)
+	movl	$7, -12(%rbp)
 	movl	$4, -8(%rbp)
 	movl	-8(%rbp), %edx
 	movl	-12(%rbp), %eax

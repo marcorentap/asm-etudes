@@ -16,7 +16,7 @@ int func1(int x, int y) {
 }
 
 int main() {
-    int x = 3;
+    int x = 7;
     int y = 4;
     int z = func1(x, y);
 }

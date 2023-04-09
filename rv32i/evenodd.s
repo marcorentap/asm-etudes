@@ -78,7 +78,7 @@ main:
 	sw	ra,28(sp)
 	sw	s0,24(sp)
 	addi	s0,sp,32
-	li	a5,3
+	li	a5,7
 	sw	a5,-20(s0)
 	li	a5,4
 	sw	a5,-24(s0)
